@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRINETRA Online Shopping Website</title>
+    <link rel="stylesheet" href="Stylesheet/style.css">
+    <link rel="stylesheet" href="Stylesheet/shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .container {
+            display: flex;
+            margin-bottom: 40px;
+        }
+        .bigimage img {
+            height: 60vh;
+            width: 100%;
+            box-shadow: 1px 1px 5px black;
+        }
+        .smallimage {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-top: 5px;
+        }
+        .image {
+            width: 40%;
+        }
+        .smallimage img {
+            height: 115px;
+            width: 115px;
+            border: 1px solid gray;
+            /* margin: 2px; */
+            
+        }
+        .smallimage img:nth-child(2){
+            margin-left:5px;
+        }
+        .smallimage img:nth-child(3){
+            margin-left:5px;
+        }
+        .smallimage img:nth-child(4){
+            margin-left:5px;
+        }
+
+
+        .description h4{
+            line-height: 50px;
+            color: black;
+        }
+        .description h2{
+            font-size: 32px;
+            line-height: 50px;
+        }
+        .description h1{
+            font-size: 34px;
+        }
+        .description select{
+            display: block;
+            padding: 10px 20px;
+        }
+        .description select:focus{
+            outline: none;
+        }
+        .description input{
+            padding: 10px;
+            width:60px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            outline: none;
+        }
+        .description input:focus{
+            outline: none;
+        }
+        .description button{
+            font-size: 11px;
+            padding: 13px 15px;
+            border: none;
+        }
+        .description h2{
+            margin-top: 20px;
+        }
+        .description p{
+            line-height: 30px;
+            color:black
+        }
+        @media (max-width:799px) {
+            .container {
+            display: flex;
+            padding: 30px 40px;
+            margin-top: 20px;
+        }
+        .bigimage img {
+            height: 25vh;
+            width: 100%;
+            box-shadow: 1px 1px 5px black;
+        }
+        .smallimage {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .image {
+            width: 40%;
+        }
+        .smallimage img {
+            height:65px;
+            width: 65px;
+        }
+        .description{
+            padding: 0px 30px 0px 40px;
+        }
+        .description h4{
+            line-height: 30px;
+            color: black;
+        }
+
+        .description p{
+            line-height: 25px;
+            color:black
+        }
+        }
+        @media (max-width:399px){
+            .container {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 10px;
+            margin-top: 10px;
+        }
+        .bigimage img {
+            height: 45vh;
+        }
+        .smallimage {
+            margin-top: 10px;
+        }
+        .image {
+            width: 90%;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        .smallimage img {
+            height:65px;
+            width: 65px;
+            margin-bottom: 20px;
+        }
+        .smallimage img:nth-child(2){
+            margin-left:2px;
+        }
+        .smallimage img:nth-child(3){
+            margin-left:2px;
+        }
+        .smallimage img:nth-child(4){
+            margin-left:2px;
+        }
+        .description{
+            padding: 0px 30px 0px 20px;
+        }
+        .description h4{
+            line-height: 10px;
+            color: black;
+            text-shadow: none;
+        }
+        .description h2{
+            font-size: 29px;
+            font-weight: 700;
+            margin: 10px 0;
+            margin-bottom: 0;
+            line-height: 40px;
+        }
+        .description h1{
+            font-size: 25px;
+            padding: 15px 0px;
+            line-height: 30px;
+        }
+
+        .description p{
+            line-height: 25px;
+            color:black;
+            text-shadow: none;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="header">
+        <a href="home.html" class="mainlogo">TRINETRA</a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="mobile">
+            <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            <i class="fa fa-bars" aria-hidden="true" id="ham" onclick="run()"></i>
+        </div>
+    </section>
+    <section id="productdetails">
+        <div class="container section-p1">
+            <div class="image">
+                <div class="bigimage">
+                    <img src="img/girl5.jpg" alt="">
+                </div>
+                <div class="smallimage">
+                    <img src="img/girl1.jpg" alt="">
+                    <img src="img/girl3.jpg" alt="">
+                    <img src="img/girl4.jpg" alt="">
+                    <img src="img/girl2.jpg" alt="">
+                </div>
+            </div>
+            <div class="description section-p1">
+                <h4>Home/T-shirts</h4>
+                <h2>Men's fashion shirts</h2>
+                <h1>$139.00</h1>
+                <select>
+                    <option>select option</option>
+                    <option>small (s)</option>
+                    <option>medium (m)</option>
+                    <option>large (l)</option>
+                    <option>extra large (xl)</option>
+                </select>
+                <input type="number" value="1">
+                <button class="btn">Add To Cart</button>
+                <h2>Product Details</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur vero, cumque harum 
+                    blanditiis sint autem odio odit quae ex quod similique sed provident porro
+                     asperiores quibusdam, placeat architecto. Obcaecati voluptatem animi blanditiis 
+                     maxime ducimus?</p>
+            </div>
+        </div>
+    </section>
+    <section id="product" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>Summer Collection New Modern Design</p>
+        <div class="pro">
+            <div class="procontainer">
+                <img src="img/men1.jpg" alt="">
+                <div class="des">
+                    <div>
+                        <span>adidas</span>
+                        <h5>Leriya Fashion</h5>
+                        <div class="star">
+                            <i class="fa fa-star star" aria-hidden="true"></i>
+                            <i class="fa fa-star star" aria-hidden="true"></i>
+                            <i class="fa fa-star star" aria-hidden="true"></i>
+                            <i class="fa fa-star star" aria-hidden="true"></i>
+                            <i class="fa fa-star star" aria-hidden="true"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+
+                    <div>
+                        <i class="fa fa-shopping-bag bag" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="procontainer">
+                <img src="img/women1.jpg" alt="">
+                <div class="des">
+                    <div>
+                        <span>adidas</span>
+                        <h5>Leriya Fashion</h5>
+                        <div class="star">
+                            <i class="fa fa-star star" aria-hidden="true"></i>
+                            <i class="fa fa-star star" aria-hidden="true"></i>
+                            <i class="fa fa-star star" aria-hidden="true"></i>
+                            <i class="fa fa-star star" aria-hidden="true"></i>
+                            <i class="fa fa-star star" aria-hidden="true"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+
+                    <div>
+                        <i class="fa fa-shopping-bag bag" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="procontainer">
+                <img src="img/men2.jpg" alt="">
+                <div class="des">
+                    <div>
+                        <span>adidas</span>
+                        <h5>Diwali Fashion</h5>
+                        <div class="star">
+                            <i class="fa fa-star star" aria-hidden="true"></i>
+                            <i class="fa fa-star star" aria-hidden="true"></i>
+                            <i class="fa fa-star star" aria-hidden="true"></i>
+                            <i class="fa fa-star star" aria-hidden="true"></i>
+                            <i class="fa fa-star star" aria-hidden="true"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+
+                    <div>
+                        <i class="fa fa-shopping-bag bag" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="procontainer">
+                <img src="img/women2.jpg" alt="">
+                <div class="des">
+                    <div>
+                        <span>adidas</span>
+                        <h5>Summer Fashion</h5>
+                        <div class="star">
+                            <i class="fa fa-star star" aria-hidden="true"></i>
+                            <i class="fa fa-star star" aria-hidden="true"></i>
+                            <i class="fa fa-star star" aria-hidden="true"></i>
+                            <i class="fa fa-star star" aria-hidden="true"></i>
+                            <i class="fa fa-star star" aria-hidden="true"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+
+                    <div>
+                        <i class="fa fa-shopping-bag bag" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="search" class="section-m1">
+        <div class="des">
+            <h2>Signup for news letters</h2>
+            <p>Get E-mail updates about latest shops and <span>special offers.</span></p>
+        </div>
+        <div class="input">
+            <input type="text" class="input" placeholder="your email address">
+            <button class="btn">sign up</button>
+        </div>
+    </section>
+    <footer>
+        <div class="col">
+            <a href="home.html" class="mainlogo">TRINETRA</a>
+            <h4>Contact - </h4>
+            <p><strong>Address :</strong>182,Gandhi Ward,Pandhurna [Madhya Pradesh]</p>
+            <p><strong>Phone :</strong>+91 9109064947, +91 9424721521</p>
+            <p><strong>Hours :</strong>9:00 AM - 5:00 PM Mon-Sat</p>
+            <br>
+            <div class="follow">
+                <h4>Follow us -</h4>
+                <div class="icon">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About -</h4>
+            <p>About Us</p>
+            <p>Delivery Information</p>
+            <p>Privacy Policy</p>
+            <p>Terms & Conditions</p>
+            <p>Contact Us</p>
+        </div>
+        <div class="col">
+            <h4>My Account -</h4>
+            <p>Sign In</p>
+            <p>View Cart</p>
+            <p>My Wishlist</p>
+            <p>Track My Orders</p>
+            <p>Help</p>
+        </div>
+        <div class="col">
+            <h4>Install App -</h4>
+            <p>From App Store or Google Play</p>
+            <div class="appstore">
+                <img src="img/googlepay.png" id="google" alt="">
+                <img src="img/app.png" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <div class="payments">
+                <img src="img/payment1.png" alt="">
+                <img src="img/payment2.png" alt="">
+                <img src="img/payment4.png" alt="">
+                <img src="img/payment5.png" alt="">
+            </div>
+        </div>
+
+    </footer>
+    <div id="copyright">
+        <i class="fa fa-copyright" aria-hidden="true"></i>
+        February 2024, Sumit Khursange etc., HTML CSS Ecommerse Template
+    </div>
+</body>
+
+</html>

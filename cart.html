@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRINETRA Online Shopping Website</title>
+    <link rel="stylesheet" href="Stylesheet/style.css">
+    <link rel="stylesheet" href="Stylesheet/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #cart {
+            margin: 40px 80px;
+            padding: 20px;
+            border: 1px solid gray;
+            box-shadow: 1px 1px 5px black;
+        }
+
+        #cart table thead {
+            border: 1px solid rgb(165, 165, 165);
+            box-shadow: 1px 1px 1px black;
+        }
+
+        #cart td {
+            padding-left: 10px;
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        #cart table thead td {
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 20px;
+            border-left: none;
+            border-right: none;
+            text-align: center;
+        }
+
+        #cart table td:nth-child(1) {
+            width: 100px;
+            align-items: center;
+        }
+
+        #cart table td:nth-child(2) {
+            width: 150px;
+            align-items: center;
+        }
+
+        #cart table td:nth-child(3) {
+            width: 250px;
+            align-items: center;
+        }
+
+        #cart table td:nth-child(4) {
+            width: 100px;
+            align-items: center;
+        }
+
+        #cart table td:nth-child(5) {
+            width: 150px;
+            align-items: center;
+        }
+
+        #cart table td:nth-child(6) {
+            width: 100px;
+            align-items: center;
+        }
+
+        #cart input {
+            width: 60px;
+            padding: 10px 10px;
+        }
+
+        #cart a {
+            font-size: 27px;
+            font-weight: 100;
+            color: rgb(213, 117, 117);
+        }
+
+        #cart input:focus {
+            outline: none;
+        }
+
+        #cart table {
+            border-collapse: collapse;
+            table-layout: fixed;
+            white-space: nowrap;
+        }
+
+        #cart img {
+            width: 60px;
+        }
+
+        #cards {
+            display: flex;
+        }
+
+        #cards .first {
+            width: 50%;
+            padding: 20px 40px;
+
+        }
+
+        #cards .first h2 {
+            font-size: 32px;
+            line-height: 30px;
+        }
+
+        #cards .first input {
+            width: 300px;
+            padding: 5px 20px;
+            font-size: 20px;
+            margin-top: 5px;
+            align-items: center;
+        }
+
+        #cards button {
+            padding: 10px 20px;
+            border-radius: 2px;
+            border: none;
+            font-size: 15px;
+        }
+
+        #cards .second h2 {
+            font-size: 32px;
+            line-height: 50px;
+        }
+
+        #cards .second {
+            border: 1px solid rgb(137, 137, 137);
+            padding: 40px 40px;
+            width: 50%;
+            box-shadow: 1px 1px 2px gray;
+        }
+
+        #cards .second table {
+            width: 100%;
+        }
+
+        #cards .second table td {
+            border: 1px solid rgb(220, 220, 220);
+            width: 50%;
+            padding: 5px 10px;
+            margin: 0;
+        }
+
+        @media (max-width:799px) {
+            #hero {
+                height: 40vh;
+            }
+
+            #cart {
+                margin: 40px 40px;
+                padding: 10px;
+            }
+
+            #cart td {
+                padding-left: 11px;
+                font-size: 11px;
+                padding-top: 10px;
+            }
+
+            #cart table thead td {
+                font-weight: 600;
+                font-size: 15px;
+                text-transform: uppercase;
+                padding: 10px;
+                text-align: center;
+            }
+
+            #cart table td:nth-child(1) {
+                width: 60px;
+                align-items: center;
+            }
+
+            #cart table td:nth-child(2) {
+                width: 60px;
+                align-items: center;
+            }
+
+            #cart table td:nth-child(3) {
+                width: 110px;
+                align-items: center;
+            }
+
+            #cart table td:nth-child(4) {
+                width: 60px;
+                align-items: center;
+            }
+
+            #cart table td:nth-child(5) {
+                width: 80px;
+                align-items: center;
+            }
+
+            #cart table td:nth-child(6) {
+                width: 60px;
+                align-items: center;
+            }
+
+            #cards {
+                width: 90%;
+                margin: auto;
+                padding: 0;
+            }
+
+            #cards .first input {
+                width: 250px;
+            }
+
+            #cards .first h2 {
+                line-height: 40px;
+            }
+
+            #cards {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 40px;
+            }
+
+            #cards .first {
+                width: 40%;
+                padding: 20px 20px;
+
+            }
+
+            #cards .first h2 {
+                font-size: 32px;
+                line-height: 50px;
+            }
+
+            #cards .first input {
+                width: 250px;
+                padding: 5px 20px;
+                font-size: 20px;
+                margin-top: 5px;
+                align-items: center;
+            }
+
+            #cards button {
+                padding: 10px 20px;
+                border-radius: 2px;
+                border: none;
+                font-size: 15px;
+            }
+
+            #cards .second h2 {
+                font-size: 32px;
+                line-height: 50px;
+            }
+
+            #cards .second {
+                border: 1px solid rgb(137, 137, 137);
+                padding: 40px 40px;
+                width: 50%;
+                margin-left: 20px;
+                box-shadow: 1px 1px 2px gray;
+            }
+
+            #cards .second table {
+                width: 100%;
+            }
+
+            #cards .second table td {
+                border: 1px solid rgb(220, 220, 220);
+                width: 50%;
+                padding: 5px 10px;
+                margin: 0;
+            }
+        }
+
+        @media (max-width:399px) {
+            #cart {
+                overflow-x: auto;
+                margin: 40px 0px;
+
+            }
+
+            #cards {
+                width: 90%;
+                margin: auto;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #cards .first input {
+                width: 250px;
+            }
+
+            #cards .first h2 {
+                line-height: 40px;
+            }
+
+            #cards .first {
+                width: 100%;
+                padding: 20px 20px;
+
+            }
+
+            #cards .first h2 {
+                font-size: 22px;
+                line-height: 50px;
+            }
+
+            #cards .first input {
+                width: 200px;
+            }
+
+            #cards button {
+                font-size: 11px;
+            }
+
+            #cards .second h2 {
+                font-size: 25px;
+                line-height: 40px;
+            }
+
+            #cards .second {
+                border: 1px solid rgb(137, 137, 137);
+                padding: 40px 40px;
+                width: 100%;
+                margin-left: 20px;
+                box-shadow: 1px 1px 2px gray;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="header">
+        <a href="google.com" class="mainlogo">TRINETRA</a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active" href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="mobile">
+            <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            <i class="fa fa-bars" aria-hidden="true" id="ham" onclick="run()"></i>
+        </div>
+    </section>
+    <section id="hero">
+
+        <h2>#lets_talk</h2>
+        <p>you can easily contact us on this options</p>
+    </section>
+
+    <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+                    <td><img src="img/men1.jpg" alt=""></td>
+                    <td>Carton Astorout Shirt</td>
+                    <td>$1009.00</td>
+                    <td><input type="number" name="" value="1" id=""></td>
+                    <td>$1009.00</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+                    <td><img src="img/men2.jpg" alt=""></td>
+                    <td>Winter Fashion</td>
+                    <td>$139.00</td>
+                    <td><input type="number" name="" value="4" id=""></td>
+                    <td>$139.00</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+                    <td><img src="img/men3.jpg" alt=""></td>
+                    <td>Seasonal Shirts</td>
+                    <td>$199.00</td>
+                    <td><input type="number" name="" value="1" id=""></td>
+                    <td>$199.00</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+                    <td><img src="img/women4.jpg" alt=""></td>
+                    <td>Trending Fashion</td>
+                    <td>$439.00</td>
+                    <td><input type="number" name="" value="1" id=""></td>
+                    <td>$439.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="cards" class="section-p1">
+        <div class="first">
+            <h2>Apply Coupons</h2>
+            <input type="text">
+            <button class="btn">Apply</button>
+        </div>
+        <div class="second">
+            <h2>Cards Total</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Cards Subtotal</td>
+                        <td>$335</td>
+                    </tr>
+                    <tr>
+                        <td>Shipping</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td><strong>$335</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn">Proceed To Checkout</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="col">
+            <a href="home.html" class="mainlogo">TRINETRA</a>
+            <h4>Contact - </h4>
+            <p><strong>Address :</strong>182,Gandhi Ward,Pandhurna [Madhya Pradesh]</p>
+            <p><strong>Phone :</strong>+91 9109064947, +91 9424721521</p>
+            <p><strong>Hours :</strong>9:00 AM - 5:00 PM Mon-Sat</p>
+            <br>
+            <div class="follow">
+                <h4>Follow us -</h4>
+                <div class="icon">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About -</h4>
+            <p>About Us</p>
+            <p>Delivery Information</p>
+            <p>Privacy Policy</p>
+            <p>Terms & Conditions</p>
+            <p>Contact Us</p>
+        </div>
+        <div class="col">
+            <h4>My Account -</h4>
+            <p>Sign In</p>
+            <p>View Cart</p>
+            <p>My Wishlist</p>
+            <p>Track My Orders</p>
+            <p>Help</p>
+        </div>
+        <div class="col">
+            <h4>Install App -</h4>
+            <p>From App Store or Google Play</p>
+            <div class="appstore">
+                <img src="img/googlepay.png" id="google" alt="">
+                <img src="img/app.png" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <div class="payments">
+                <img src="img/payment1.png" alt="">
+                <img src="img/payment2.png" alt="">
+                <img src="img/payment4.png" alt="">
+                <img src="img/payment5.png" alt="">
+            </div>
+        </div>
+
+    </footer>
+    <div id="copyright">
+        <i class="fa fa-copyright" aria-hidden="true"></i>
+        February 2024, Sumit Khursange etc., HTML CSS Ecommerse Template
+    </div>
+</body>
+
+</html>
